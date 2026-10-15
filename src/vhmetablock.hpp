@@ -1,14 +1,14 @@
 /* ======================================================================================
  * Library       : vhlibmetacrc
  * Description   : PUSHK metablock hash calculation library
- * Revision      : 0.0.1
+ * Revision      : 0.0.2
  * Source        : https://github.com/vigatron/vhlibmetacrc
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhmetablock.hpp
- * Content size  : 966
- * Date / Time   : 15-10-2026 15:55:09
- * MD5           : ea3539b50db9d7f6697d4f0bed76078b
+ * Content size  : 1005
+ * Date / Time   : 15-10-2026 16:39:28
+ * MD5           : fcc684ce08b55ae793f1a2b746414db5
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
  * Author        : Viktor Glebov / V01G04A81
@@ -53,9 +53,6 @@ private:
     int tbl_crc_size;
 
     //
-    // void dealloc();
-
-    //
     std::string getfname();
 
     //
@@ -75,13 +72,18 @@ private:
 
     //
     void GenerateD(int d, uint16_t blksize, uint8_t *blkdat, uint16_t *pdst);
+
+    static const char *_szhex;
+
+    std::string strhex16(size_t v);
+
 };
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibmetacrc
  * File             : src/vhmetablock.hpp
- * Revision         : 0.0.1
- * Content size     : 966
- * Date / Time      : 15-10-2026 15:55:09
- * MD5              : ea3539b50db9d7f6697d4f0bed76078b
+ * Revision         : 0.0.2
+ * Content size     : 1005
+ * Date / Time      : 15-10-2026 16:39:28
+ * MD5              : fcc684ce08b55ae793f1a2b746414db5
  * Copyright        : © 2026 Viktor Glebov
  * ====================================================================== */

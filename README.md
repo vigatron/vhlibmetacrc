@@ -7,8 +7,8 @@
 ## Library Metadata
 
 * **Repository:** https://github.com/vigatron/vhlibmetacrc
-* **Revision:** `0.0.1`
-* **Main Headers:** `src/vhmetablock.hpp`, `src/vhmetablock_cache.hpp`
+* **Revision:** `0.0.2`
+* **Main Headers:** `src/vhmetablock.hpp`, `src/vhmetablock_cache.hpp`, `src/vhmetablock_crc16.hpp`
 * **Author:** Viktor Glebov (`V01G04A81`)
 * **Copyright:** © 2026 Viktor Glebov
 * **License:** MIT
