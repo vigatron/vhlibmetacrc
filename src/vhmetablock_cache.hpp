@@ -1,13 +1,13 @@
 /* ======================================================================================
  * Library       : vhlibmetacrc
  * Description   : PUSHK metablock hash calculation library
- * Revision      : 0.0.1
+ * Revision      : 0.0.2
  * Source        : https://github.com/vigatron/vhlibmetacrc
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhmetablock_cache.hpp
  * Content size  : 591
- * Date / Time   : 15-10-2026 15:55:09
+ * Date / Time   : 15-10-2026 16:39:28
  * MD5           : a0a4cb9943735b53d9e688ecb0960ae0
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
@@ -50,9 +50,9 @@ class BlockMetaCache {
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibmetacrc
  * File             : src/vhmetablock_cache.hpp
- * Revision         : 0.0.1
+ * Revision         : 0.0.2
  * Content size     : 591
- * Date / Time      : 15-10-2026 15:55:09
+ * Date / Time      : 15-10-2026 16:39:28
  * MD5              : a0a4cb9943735b53d9e688ecb0960ae0
  * Copyright        : © 2026 Viktor Glebov
  * ====================================================================== */

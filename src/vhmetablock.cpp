@@ -1,14 +1,14 @@
 /* ======================================================================================
  * Library       : vhlibmetacrc
  * Description   : PUSHK metablock hash calculation library
- * Revision      : 0.0.1
+ * Revision      : 0.0.2
  * Source        : https://github.com/vigatron/vhlibmetacrc
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhmetablock.cpp
- * Content size  : 2719
- * Date / Time   : 15-10-2026 15:55:09
- * MD5           : ab6be8e000d86564e9aff641b0d3e202
+ * Content size  : 3028
+ * Date / Time   : 15-10-2026 16:39:28
+ * MD5           : af27fbb99588024cc30658a42010c5e2
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
  * Author        : Viktor Glebov / V01G04A81
@@ -20,8 +20,6 @@
 #include <iostream>
 #include <fstream>
 
-
-extern std::string szhex16(uint16_t v);
 
 /**
  * 
@@ -74,7 +72,11 @@ uint16_t BlockMeta::crc(uint8_t ll, uint16_t pos, uint16_t blksize) const {
  * 
  */
 std::string BlockMeta::getfname() {
-    return "metablock_" + szhex16(srcfile_size) + "_" + szhex16(srcfile_crc) + ".metacrc16";
+    return "metablock_"
+        + strhex16(srcfile_size)
+        + "_"
+        + strhex16(srcfile_crc)
+        + ".metacrc16";
 }
 
 /**
@@ -148,12 +150,30 @@ void BlockMeta::GenerateD(int d, uint16_t blksize, uint8_t *blkdat, uint16_t *pd
         pdst[i] = VHMetaBlockCRC16::calculate(blkdat + i, d);
     }
 }
+
+/**
+ * 
+ */
+std::string BlockMeta::strhex16(size_t v) {
+  char result[6] = {
+    _szhex[(v >> 16) & 0xF],
+    _szhex[(v >> 12) & 0xF],
+    _szhex[(v >> 8) & 0xF],
+    _szhex[(v >> 4) & 0xF],
+    _szhex[(v >> 0) & 0xF],
+    0};
+
+  return std::string(result);
+}
+
+const char * BlockMeta::_szhex = "0123456789ABCDEF";
+
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibmetacrc
  * File             : src/vhmetablock.cpp
- * Revision         : 0.0.1
- * Content size     : 2719
- * Date / Time      : 15-10-2026 15:55:09
- * MD5              : ab6be8e000d86564e9aff641b0d3e202
+ * Revision         : 0.0.2
+ * Content size     : 3028
+ * Date / Time      : 15-10-2026 16:39:28
+ * MD5              : af27fbb99588024cc30658a42010c5e2
  * Copyright        : © 2026 Viktor Glebov
  * ====================================================================== */
